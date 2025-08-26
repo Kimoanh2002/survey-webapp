@@ -1,0 +1,70 @@
+<%@ page contentType="text/html;charset=UTF-8" language="java" %>
+<html>
+<head>
+    <title>Survey</title>
+    <link rel="stylesheet" href="survey.css">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+<header>
+    <div class="header-content">
+        <div class="title-section">
+            <h1>Survey</h1>
+            <p>If you have a moment, we'd appreciate it if you would fill out this survey.</p>
+        </div>
+        <div class="logo-section">
+            <img src="images/murach-logo.png" alt="Murach Logo" class="logo">
+            <span class="brand">MURACH</span>
+        </div>
+    </div>
+</header>
+<div class="container">
+    <form action="survey" method="post">
+        <div class="form-column">
+            <div class="form-group">
+                <label>First Name</label>
+                <input type="text" name="firstName" required>
+            </div>
+            <div class="form-group">
+                <label>Last Name</label>
+                <input type="text" name="lastName" required>
+            </div>
+            <div class="form-group">
+                <label>Email</label>
+                <input type="email" name="email" required>
+            </div>
+            <div class="form-group">
+                <label>Date of Birth</label>
+                <input type="date" name="dob">
+            </div>
+            <div class="form-group">
+                <label>How did you hear about us?</label>
+                <div class="radio-group">
+                    <label><input type="radio" name="source" value="search" checked> Search Engine</label>
+                    <label><input type="radio" name="source" value="word"> Word of Mouth</label>
+                    <label><input type="radio" name="source" value="social"> Social Media</label>
+                    <label><input type="radio" name="source" value="other"> Other</label>
+                </div>
+            </div>
+            <div class="form-group">
+                <label>Preferences</label>
+                <div class="checkbox-group">
+                    <label><input type="checkbox" name="announcements"> Announcements about new CDs and offers</label>
+                    <label><input type="checkbox" name="emailOK"> Email announcements</label>
+                </div>
+            </div>
+            <div class="form-group">
+                <label>Contact Method</label>
+                <select name="contactMethod" required>
+                    <option value="">Select an option</option>
+                    <option value="email">Email only</option>
+                    <option value="postal">Postal mail only</option>
+                    <option value="both">Email or postal mail</option>
+                </select>
+            </div>
+            <button type="submit">Submit</button>
+        </div>
+    </form>
+</div>
+</body>
+</html>
